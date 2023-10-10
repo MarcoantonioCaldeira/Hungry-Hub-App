@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
-const Login = () => {
+ 
+const Cadastro = () => {
     return(
         <div>
-            <h1>Aque vai ser o formulario de Login</h1>
+            <h1>Aque vai ser o formulario de Cadastro de clientes</h1>
             <Link to="/">retornar a página inicial</Link>
         </div>
-    )
+    );
 }
 
-export default Login;
+export default Cadastro;

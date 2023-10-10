@@ -1,18 +1,10 @@
-import logo from './logo.svg';
-//import './App.css';
+import React from 'react';
+import RoutesContainer from "./routes"
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <div>
-          <h3>Seja bem vindo os Hungry-hub</h3>
-          <button>Cadastro</button>
-          <button>Login</button>
-        </div>
-      </header>
-    </div>
-);
+    <RoutesContainer/>
+  );
 }
 
-export default App;
+
