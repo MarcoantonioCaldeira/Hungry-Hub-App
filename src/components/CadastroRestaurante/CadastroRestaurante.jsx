@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import Parte1Form from './CadastroRestaurante/Parte1Form';
-import Parte2Form from './CadastroRestaurante/Parte2Form';
-import Parte3Form from './CadastroRestaurante/Parte3Form';
+import Parte1Form from './Parte1Form';
+import Parte2Form from './Parte2Form';
+import Parte3Form from './Parte3Form';
  
 class CadastroRestaurante extends Component {
    constructor() {
@@ -46,16 +46,16 @@ class CadastroRestaurante extends Component {
    };
 
    handleNextStep = () => {
-    this.setState((prevState) => ({
-        cuttentStep: prevState.currentStep + 1,
-    }));
-   };
+        this.setState((prevState) => ({
+        currentStep: prevState.currentStep + 1,
+        }));
+    };
 
-   handleNextStep = () => {
-    this.setState((prevState) => ({
-        cuttentStep: prevState.currentStep - 1,
-    }));
-   };
+    handlePreviousStep = () => {
+        this.setState((prevState) => ({
+        currentStep: prevState.currentStep - 1,
+        }));
+    };
 
    render() {
     const { currentStep } = this.state;
@@ -63,24 +63,15 @@ class CadastroRestaurante extends Component {
 
     if(currentStep === 1) {
         formToShow = (
-            <Parte1Form
-              data={this.state.parte1Data}
-              onParte1Change={this.handleParte1Change}
-            />
+            <Parte1Form data={this.state.parte1Data} onParte1Change={this.handleParte1Change} />
         );
     } else if (currentStep === 2) {
         formToShow = (
-            <Parte2Form
-                data={this.state.parte2Data}
-                onParte2Change={this.handleParte2Change}
-            />
+            <Parte2Form data={this.state.parte2Data} onParte2Change={this.handleParte2Change} />
         );
     } else if  (currentStep === 3) {
         formToShow = (
-            <Parte3Form
-                data={this.state.parte3Data}
-                onParte3Change={this.handleParte3Change}
-            />
+            <Parte3Form data={this.state.parte3Data} onParte3Change={this.handleParte3Change} />
         );
     }
 
@@ -99,7 +90,7 @@ class CadastroRestaurante extends Component {
             )}
         </div>
     );
-   }
+  }
 }
 
 export default CadastroRestaurante;

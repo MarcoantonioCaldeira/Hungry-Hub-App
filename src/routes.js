@@ -3,7 +3,7 @@ import { Route, BrowserRouter, Routes } from "react-router-dom";
 
 import Login from './components/Login'
 import CadastroCliente from './components/CadastroCliente';
-import CadastroRestaurante from './components/CadastroRestaurante';
+import CadastroRestaurante from './components/CadastroRestaurante/CadastroRestaurante';
 import CadastroEntregador from './components/CadastroEntregador';
 import Home from './components/Home';
 
