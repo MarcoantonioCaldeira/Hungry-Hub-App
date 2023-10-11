@@ -16,7 +16,13 @@ const Parte1Form = ({ data, onParte1Change }) => {
 
             <input type="text" name="email" value={data.email} onChange={handleInputChange} placeholder="Email" />
 
-            <input type="text" name="telefone" value={data.telefone} onChange={handleInputChange} placeholder="Telefone" />
+            <input type="text" name="telefone" value={data.telefone_Restaurante} onChange={handleInputChange} placeholder="Telefone" />
+
+            <input type="text" name="cnpj_cpf" value={data.cnpj_cpf} onChange={handleInputChange} placeholder="CPF ou CNPJ" />
+
+            <input type="text" name="senha" value={data.senha} onChange={handleInputChange} placeholder="Senha" />
+
+            <input type="text" name="confirmar_senha" value={data.confirmarSenha} onChange={handleInputChange} placeholder="Confirmar Senha" />
 
             <Link to="/">retornar a página inicial</Link>
 

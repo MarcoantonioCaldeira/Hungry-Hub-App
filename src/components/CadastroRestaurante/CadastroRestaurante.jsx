@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import Parte1Form from './Parte1Form';
 import Parte2Form from './Parte2Form';
 import Parte3Form from './Parte3Form';
+import axios from 'axios';
+ 
  
 class CadastroRestaurante extends Component {
    constructor() {
@@ -13,7 +15,10 @@ class CadastroRestaurante extends Component {
         parte1Data: {
             nome_proprietario: '',
             email: '',
-            telefone: '',
+            telefone_Restaurante: '',
+            cnpj_cpf:'',
+            senha:'',
+            confirmarSenha:'',
         },
         parte2Data: {
             cep: '',
@@ -39,7 +44,7 @@ class CadastroRestaurante extends Component {
     this.setState({ parte2Data });
    };
 
-   handleParte1Change = (parte3Data) =>{
+   handleParte3Change = (parte3Data) =>{
     this.setState({ parte3Data });
    };
 
@@ -54,6 +59,50 @@ class CadastroRestaurante extends Component {
         currentStep: prevState.currentStep - 1,
         }));
     };
+
+    handleFormSubmit = async () => {
+        const { parte1Data, parte2Data, parte3Data } = this.state;
+
+        const restauranteData = {
+            nome_proprietario: parte1Data.nome_proprietario,
+            cnpj_cpf: parte1Data.cnpj_cpf,
+            telefone_Restaurante: parte1Data.telefone_Restaurante,
+            email: parte1Data.email,
+            senha: parte1Data.senha,
+            confirmarSenha: parte1Data.confirmarSenha,
+            foto_Restaurante: parte3Data.foto_Restaurante,
+            nome_restaurante: parte3Data.nome_restaurante,
+            descricao: parte3Data.descricao,
+            complemento: parte2Data.complemento,
+            endereco:{
+                uf: parte2Data.uf,
+                cidade:parte2Data.cidade,
+                bairro:parte2Data.bairro,
+                numero_end: parte2Data.numero_end
+            }
+        };
+
+        try {
+            const API_URL = 'http://localhost:5050'; // Substitua pela URL correta da sua API
+            const response = await axios.post(API_URL + `/rest/restaurante/save`, restauranteData);
+            console.log(response);
+
+            if (response.status === 200) {
+
+                setSuccess(true);
+
+                setNome('');
+                setEmail('');
+                setTelefone('');
+                setSenha('');
+                setConfirmarSenha('');
+
+            } 
+
+        } catch (error) {
+            console.error('Ocorreu um erro ao cadastrar:', error);
+        }
+    }
 
    render() {
     const { currentStep } = this.state;
