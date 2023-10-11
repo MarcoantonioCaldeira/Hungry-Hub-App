@@ -6,12 +6,13 @@ import axios from 'axios';
 axios.defaults.withCredentials = true;
 
 const CadastroCliente = () => {
+
     const [nome, setNome] = useState('');
     const [email, setEmail] = useState('');
     const [telefone, setTelefone] = useState('');
     const [senha, setSenha] = useState('');
     const [confirmarSenha, setConfirmarSenha] = useState('');
-    const [error, setError] = useState(null); // Estado para armazenar erros
+    const [error, setError] = useState(null);
     const [success, setSuccess] = useState(false);
 
     const handleFormSubmit = async (event) => {
@@ -26,28 +27,22 @@ const CadastroCliente = () => {
         };
     
         try {
-
-            setError(null);
-
-            const resposta = await axios.post(
-                'http://localhost:5050/rest/cliente/save', 
-                DadosFormulario);
-
+            const API_URL = 'http://localhost:5050';
+            const resposta = await axios.post(API_URL + '/rest/cliente/save', DadosFormulario);
+            console.log(resposta);
+           
             if (resposta.status === 200) {
-                // Define um estado de sucesso
+
                 setSuccess(true);
-        
-                // Limpa os campos do formulário
+                
                 setNome('');
                 setEmail('');
                 setTelefone('');
                 setSenha('');
                 setConfirmarSenha('');
-            }else {
-                // Lida com respostas de erro da API, se necessário
             }
-        }catch(error) {
-            
+
+        }catch(error) { 
             console.error('Ocorreu um erro ao cadastrar.');
         }
     }
