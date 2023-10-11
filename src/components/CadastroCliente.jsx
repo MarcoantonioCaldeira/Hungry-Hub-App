@@ -34,7 +34,7 @@ const CadastroCliente = () => {
             if (resposta.status === 200) {
 
                 setSuccess(true);
-                
+
                 setNome('');
                 setEmail('');
                 setTelefone('');
@@ -57,11 +57,7 @@ const CadastroCliente = () => {
 
                 <input type='text' placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)}/>
 
-                <input type='text' placeholder='telefone' value={telefone} onChange={(e) => setTelefone(e.target.value)}/>
-
-                <input type='text' placeholder='Senha' value={senha} onChange={(e) => setSenha(e.target.value)}/>
-
-                <input type='text' placeholder='Confirma Senha' value={confirmarSenha} onChange={(e) => setConfirmarSenha(e.target.value)}/>
+                <input type='text' placeholder='Celular' value={telefone} onChange={(e) => setTelefone(e.target.value)}/>
 
                 <input type='submit' value="CADASTRAR" />
             </form>
