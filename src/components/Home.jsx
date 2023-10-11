@@ -10,8 +10,17 @@ const Home = () =>{
             <li>
                 <Link to="/login">Login</Link>
             </li>
+            <p>Cadastro de Cliente</p>
             <li>
                 <Link to="/cadastro">Cadastro</Link>
+            </li>
+            <p>Cadastro de Entregador</p>
+            <li>
+                <Link to="/cadastroentregador">Cadastro</Link>
+            </li>
+            <p>Cadastro de Restaurante</p>
+            <li>
+                <Link to="/cadastrorestaurante">Cadastro</Link>
             </li>
         </ul>
       </div>

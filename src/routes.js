@@ -2,7 +2,9 @@ import React from 'react';
 import { Route, BrowserRouter, Routes } from "react-router-dom";
 
 import Login from './components/Login'
-import Cadastro from './components/Cadastro';
+import CadastroCliente from './components/CadastroCliente';
+import CadastroRestaurante from './components/CadastroRestaurante';
+import CadastroEntregador from './components/CadastroEntregador';
 import Home from './components/Home';
 
 const RoutesComponent  = () => {
@@ -10,7 +12,9 @@ const RoutesComponent  = () => {
         <Routes>
             <Route path='/' element={<Home />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/cadastro" element={<Cadastro />} />
+            <Route path="/cadastro" element={<CadastroCliente />} />
+            <Route path="/cadastroentregador" element={<CadastroEntregador />} />
+            <Route path="/cadastrorestaurante" element={<CadastroRestaurante />} />
         </Routes>
     )
 }
