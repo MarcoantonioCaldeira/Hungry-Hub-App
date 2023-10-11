@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Parte1Form = (data, onParte1Change) => {
+const Parte1Form = ({ data, onParte1Change }) => {
     const handleInputChange = (e) => {
         const { name, value } = e.target;
         onParte1Change({ [name]: value });
@@ -12,11 +12,11 @@ const Parte1Form = (data, onParte1Change) => {
 
             <input type="text" name="nome" value={data.nome} onChange={handleInputChange} placeholder="Nome" />
 
-            <input type="text" name="nome" value={data.nome} onChange={handleInputChange} placeholder="Sobrenome" />
+            <input type="text" name="nome" value={data.sobrenome} onChange={handleInputChange} placeholder="Sobrenome" />
 
-            <input type="text" name="nome" value={data.nome} onChange={handleInputChange} placeholder="Email" />
+            <input type="text" name="nome" value={data.email} onChange={handleInputChange} placeholder="Email" />
 
-            <input type="text" name="nome" value={data.nome} onChange={handleInputChange} placeholder="Celular" />
+            <input type="text" name="nome" value={data.telefone} onChange={handleInputChange} placeholder="Celular" />
 
         </div>
     )
