@@ -11,23 +11,21 @@ class CadastroRestaurante extends Component {
         currentStep:1, 
 
         parte1Data: {
-            nome: '',
-            sobrenome: '',
+            nome_proprietario: '',
             email: '',
-            celular: '',
+            telefone: '',
         },
-        parte1Data: {
+        parte2Data: {
             cep: '',
-            estado: '',
+            uf: '',
             cidade: '',
             bairro: '',
-            endereco:'',
-            numero:'',
+            numero_end:'',
             complemento:'',
         },
         parte3Data: {
-            foto:'',
-            nomeRestaurante:'',
+            foto_Restaurante:'',
+            nome_restaurante:'',
             descricao:'',
         },
     };

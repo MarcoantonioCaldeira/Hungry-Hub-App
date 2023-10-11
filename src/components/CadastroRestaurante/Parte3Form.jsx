@@ -10,7 +10,7 @@ const Parte3Form = ({ data, onParte3Change }) => {
         <div>
             <h2>"Cadastro de restaurante Parte3"</h2>
 
-            <input type="text" name="cep" value={data.cep} onChange={handleInputChange} placeholder="FOTO" />
+            <input type="text" name="Foto" value={data.foto_Restaurante} onChange={handleInputChange} placeholder="FOTO" />
 
             <input type="text" name="cidade" value={data.nome_restaurante} onChange={handleInputChange} placeholder="Nome do Restaurante" />
 
