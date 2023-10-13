@@ -77,8 +77,8 @@ class CadastroRestaurante extends Component {
             nome_restaurante: parte3Data.nome_restaurante,
             descricao: parte3Data.descricao,
             endereco:{
-                cep: parte2Data.cep,
-                uf: parte2Data.uf,
+                cep:parte2Data.cep,
+                uf:parte2Data.uf,
                 cidade:parte2Data.cidade,
                 bairro:parte2Data.bairro,
                 rua: parte2Data.rua,
@@ -93,14 +93,7 @@ class CadastroRestaurante extends Component {
             console.log(response);
 
             if (response.status === 200) {
-
-                setSuccess(true);
-                setNome('');
-                setEmail('');
-                setTelefone_Restaurante('');
-                setSenha('');
-                setConfirmarSenha('');
-
+                this.setState({ success: true });
             } 
 
         } catch (error) {
