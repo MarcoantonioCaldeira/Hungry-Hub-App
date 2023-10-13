@@ -25,12 +25,14 @@ class CadastroRestaurante extends Component {
             uf: '',
             cidade: '',
             bairro: '',
+            rua:'',
             numero_end:'',
             complemento:'',
         },
         parte3Data: {
             foto_Restaurante:'',
             nome_restaurante:'',
+            especialidade:'',
             descricao:'',
         },
     };
@@ -71,14 +73,17 @@ class CadastroRestaurante extends Component {
             senha: parte1Data.senha,
             confirmarSenha: parte1Data.confirmarSenha,
             foto_Restaurante: parte3Data.foto_Restaurante,
+            especialidade: parte3Data.especialidade,
             nome_restaurante: parte3Data.nome_restaurante,
             descricao: parte3Data.descricao,
-            complemento: parte2Data.complemento,
             endereco:{
+                cep: parte2Data.cep,
                 uf: parte2Data.uf,
                 cidade:parte2Data.cidade,
                 bairro:parte2Data.bairro,
-                numero_end: parte2Data.numero_end
+                rua: parte2Data.rua,
+                numero_end: parte2Data.numero_end,
+                complemento: parte2Data.complemento,
             }
         };
 
@@ -90,10 +95,9 @@ class CadastroRestaurante extends Component {
             if (response.status === 200) {
 
                 setSuccess(true);
-
                 setNome('');
                 setEmail('');
-                setTelefone('');
+                setTelefone_Restaurante('');
                 setSenha('');
                 setConfirmarSenha('');
 

@@ -16,6 +16,8 @@ const Parte3Form = ({ data, onParte3Change }) => {
 
             <input type="text" name="bairro" value={data.descricao} onChange={handleInputChange} placeholder="Descrição" />
 
+            <input type="text" name="especialidade" value={data.especialidade} onChange={handleInputChange} placeholder="Especialidade" />
+
         </div>
     )
 }

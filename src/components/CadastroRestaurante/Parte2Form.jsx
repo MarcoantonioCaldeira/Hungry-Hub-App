@@ -18,7 +18,9 @@ const Parte2Form = ({ data, onParte2Change }) => {
 
             <input type="text" name="bairro" value={data.bairro} onChange={handleInputChange} placeholder="Bairro" />
 
-            {/* <input type="text" name="rua" value={data.rua} onChange={handleInputChange} placeholder="Rua" /> */}
+            <input type="text" name="numero de endereço" value={data.numero_end} onChange={handleInputChange} placeholder="Numero" />
+
+            <input type="text" name="rua" value={data.rua} onChange={handleInputChange} placeholder="Rua" />
 
             <input type="text" name="complemento" value={data.complemento} onChange={handleInputChange} placeholder="Complemento" />
 
