@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import Parte1Form from './Parte1Form';
 import Parte2Form from './Parte2Form';
 import Parte3Form from './Parte3Form';
@@ -39,17 +38,24 @@ class CadastroRestaurante extends Component {
    }
 
    handleParte1Change = (parte1Data) =>{
-    this.setState({ parte1Data });
+    this.setState((prevState) => ({
+        parte1Data: {...prevState.parte1Data, ...parte1Data}
+    }));
    };
 
    handleParte2Change = (parte2Data) =>{
-    this.setState({ parte2Data });
+    this.setState((prevState) => ({
+        parte2Data: {...prevState.parte2Data, ...parte2Data}
+    }));
    };
 
    handleParte3Change = (parte3Data) =>{
-    this.setState({ parte3Data });
+    this.setState((prevState) => ({
+        parte3Data: {...prevState.parte3Data, ...parte3Data}
+    }));
    };
 
+   
    handleNextStep = () => {
         this.setState((prevState) => ({
         currentStep: prevState.currentStep + 1,
@@ -83,13 +89,13 @@ class CadastroRestaurante extends Component {
                 bairro:parte2Data.bairro,
                 rua: parte2Data.rua,
                 numero_end: parte2Data.numero_end,
-                complemento: parte2Data.complemento,
+                complemento: parte2Data.complemento
             }
         };
 
         try {
             const API_URL = 'http://localhost:5050'; // Substitua pela URL correta da sua API
-            const response = await axios.post(`${API_URL}/restaurante/cadastrar`, restauranteData);
+            const response = await axios.post( API_URL + '/rest/restaurante/save', restauranteData);
             console.log(response);
 
             if (response.status === 200) {
