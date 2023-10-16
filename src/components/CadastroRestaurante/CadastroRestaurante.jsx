@@ -89,7 +89,7 @@ class CadastroRestaurante extends Component {
 
         try {
             const API_URL = 'http://localhost:5050'; // Substitua pela URL correta da sua API
-            const response = await axios.post(API_URL + `/rest/restaurante/save`, restauranteData);
+            const response = await axios.post(`${API_URL}/restaurante/cadastrar`, restauranteData);
             console.log(response);
 
             if (response.status === 200) {

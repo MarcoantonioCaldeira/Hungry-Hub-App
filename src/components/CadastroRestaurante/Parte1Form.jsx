@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+
 const Parte1Form = ({ data, onParte1Change }) => {
     const handleInputChange = (e) => {
         const { name, value } = e.target;
-        onParte1Change({ ...data, [name]: value });
+        onParte1Change({ [name]: value });
     };
 
     return (

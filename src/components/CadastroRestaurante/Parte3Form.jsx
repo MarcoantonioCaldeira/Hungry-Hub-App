@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+
 
 const Parte3Form = ({ data, onParte3Change }) => {
     const handleInputChange = (e) => {
@@ -18,7 +18,6 @@ const Parte3Form = ({ data, onParte3Change }) => {
             <input type="text" name="descricao" value={data.descricao} onChange={handleInputChange} placeholder="Descrição" />
 
             <input type="text" name="especialidade" value={data.especialidade} onChange={handleInputChange} placeholder="Especialidade" />
-
         </div>
     )
 }
