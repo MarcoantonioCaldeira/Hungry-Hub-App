@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+
 const Parte3Form = ({ data, onParte3Change }) => {
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -18,6 +19,12 @@ const Parte3Form = ({ data, onParte3Change }) => {
             <input type="text" name="descricao" value={data.descricao} onChange={handleInputChange} placeholder="Descrição" />
 
             <input type="text" name="especialidade" value={data.especialidade} onChange={handleInputChange} placeholder="Especialidade" />
+
+        
+            {data.showSuccessMessage && (
+                <div className="success-message">Restaurante cadastrado com sucesso!</div>
+            )}
+         
         </div>
     )
 }
