@@ -12,7 +12,7 @@ const Parte1Form = ({ data, onParte1Change }) => {
         <div>
             <h2>Cadastro de Entregador Parte 1</h2>
 
-            <input type="text" name="nome_proprietario" value={data.nome} onChange={handleInputChange} placeholder="Nome do Proprietário" />
+            <input type="text" name="nome" value={data.nome} onChange={handleInputChange} placeholder="Nome" />
 
             <input type="text" name="sobrenome" value={data.sobrenome} onChange={handleInputChange} placeholder="Sobrenome" />
 

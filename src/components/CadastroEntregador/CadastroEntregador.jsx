@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import Parte1Form from './Parte1Form';
 import Parte2Form from './Parte2Form';
-import Parte3Form  from './Parte3Form';
- 
+import Parte3Form from './Parte3Form';
+import axios from 'axios';
+
+
 class CadastroEntregador extends Component {
 
     constructor() {
@@ -17,20 +18,20 @@ class CadastroEntregador extends Component {
                email:'',
                cpf:''
             },
+
             parte2Data: {
                telefone:'',
                cnh:'',
                Foto_Entregador:''
             },
+
             parte3Data: {
                cep:'',
                cidade:'',
                bairro:'',
                rua:'',
                numero_casa:''
-            },
-    
-            showSuccessMessage: false,
+            }
         };
        };
     
@@ -72,24 +73,20 @@ class CadastroEntregador extends Component {
             const { parte1Data, parte2Data, parte3Data } = this.state;
     
             const entregadorData = {
-                nome_proprietario: parte1Data.nome_proprietario,
-                cnpj_cpf: parte1Data.cnpj_cpf,
-                telefone_Restaurante: parte1Data.telefone_Restaurante,
+                nome: parte1Data.nome,
+                sobrenome: parte1Data.sobrenome,
                 email: parte1Data.email,
-                senha: parte1Data.senha,
-                confirmarSenha: parte1Data.confirmarSenha,
-                foto_Restaurante: parte3Data.foto_Restaurante,
-                especialidade: parte3Data.especialidade,
-                nome_restaurante: parte3Data.nome_restaurante,
-                descricao: parte3Data.descricao,
+                cpf: parte1Data.cpf,
+                cnh: parte2Data.cnh,
+                telefone: parte2Data.telefone,
+                senha: parte2Data.senha,
+                confirmarSenha: parte2Data.confirmarSenha,
                 endereco:{
-                    cep:parte2Data.cep,
-                    uf:parte2Data.uf,
-                    cidade:parte2Data.cidade,
-                    bairro:parte2Data.bairro,
-                    rua: parte2Data.rua,
-                    numero_end: parte2Data.numero_end,
-                    complemento: parte2Data.complemento
+                  cep: parte3Data.cep,
+                  cidade:parte3Data.cidade,
+                  bairro: parte3Data.bairro,
+                  rua:parte3Data.rua,
+                  numero_casa: parte3Data.numero_casa
                 }
             };
     
@@ -99,7 +96,7 @@ class CadastroEntregador extends Component {
                 console.log(response);
     
                 if (response.status === 200) {
-                    this.setState({ showSuccessMessage: true })
+                    //this.setState({ showSuccessMessage: true })
                 } 
     
             } catch (error) {
@@ -121,14 +118,14 @@ class CadastroEntregador extends Component {
             );
         } else if  (currentStep === 3) {
             formToShow = (
-                <Parte3Form data={this.state.parte3Data} onParte3Change={this.handleParte3Change} showSuccessMessage={this.state.showSuccessMessage} />
+                <Parte3Form data={this.state.parte3Data} onParte3Change={this.handleParte3Change} />
             );
         }
     
     
         return (
             <div>
-                <h1>Cadastro de Restaurante - Parte {currentStep}</h1>
+                <h1>Cadastro de Entregador - Parte {currentStep}</h1>
                 {formToShow}
                 {currentStep > 1 && (
                     <button onClick={this.handlePreviousStep}>Anterior</button>
@@ -142,8 +139,6 @@ class CadastroEntregador extends Component {
             </div>
         );
       }
-    
-
 }
 
 export default CadastroEntregador;

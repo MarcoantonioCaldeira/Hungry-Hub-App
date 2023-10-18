@@ -25,4 +25,4 @@ const Parte3Form = ({ data, onParte3Change }) => {
     )
 }
 
-export default Parte2Form;
+export default Parte3Form;
