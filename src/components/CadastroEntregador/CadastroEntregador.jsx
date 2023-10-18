@@ -1,80 +1,149 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import Parte1Form from './Parte1Form';
+import Parte2Form from './Parte2Form';
+import Parte3Form  from './Parte3Form';
  
-const CadastroEntregador = () => {
+class CadastroEntregador extends Component {
+
+    constructor() {
+        super();
+        this.state = {
+            currentStep:1, 
     
-    // const [nome, setNome] = useState('');
-    // const [email, setEmail] = useState('');
-    // const [telefone, setTelefone] = useState('');
-    // const [senha, setSenha] = useState('');
-    // const [confirmarSenha, setConfirmarSenha] = useState('');
-    // const [error, setError] = useState(null);
-    // const [success, setSuccess] = useState(false);
-
-    // const handleFormSubmit = async (event) => {
-    //     event.preventDefault();
+            parte1Data: {
+               nome:'',
+               sobrenome:'',
+               email:'',
+               cpf:''
+            },
+            parte2Data: {
+               telefone:'',
+               cnh:'',
+               Foto_Entregador:''
+            },
+            parte3Data: {
+               cep:'',
+               cidade:'',
+               bairro:'',
+               rua:'',
+               numero_casa:''
+            },
     
-    //     const DadosFormulario = {
-    //         nome: nome,
-    //         email: email,
-    //         telefone: telefone,
-    //         senha: senha,
-    //         confirmarSenha: confirmarSenha,
-    //     };
+            showSuccessMessage: false,
+        };
+       };
     
-    //     try {
-    //         const API_URL = 'http://localhost:5050';
-    //         const resposta = await axios.post(API_URL + '/rest/entregador/save', DadosFormulario);
-    //         console.log(resposta);
-           
-    //         if (resposta.status === 200) {
-
-    //             setSuccess(true);
-                
-    //             setNome('');
-    //             setEmail('');
-    //             setTelefone('');
-    //             setSenha('');
-    //             setConfirmarSenha('');
-    //         }
-
-    //     }catch(error) { 
-    //         console.error('Ocorreu um erro ao cadastrar.');
-    //     }
-    // }
-
-
-    // return(
-    //     <div>
-    //         <h1>Cadastro de Entregadores</h1>
-    //         <form onSubmit={handleFormSubmit}>
-
-    //             <input type='text' placeholder='Seu nome' value={nome} onChange={(e) => setNome(e.target.value)} />
-
-    //             <input type='text' placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)}/>
-
-    //             <input type='text' placeholder='Celular' value={telefone} onChange={(e) => setTelefone(e.target.value)}/>
-
-    //             {/* <input type='text' placeholder='CPF' value={email} onChange={(e) => setEmail(e.target.value)}/>
-
-    //             <input type='text' placeholder='CNH' value={email} onChange={(e) => setEmail(e.target.value)}/>
-
-    //             <input type='text' placeholder='Celular' value={telefone} onChange={(e) => setTelefone(e.target.value)}/>
-
-    //             <input type='text' placeholder='Senha' value={senha} onChange={(e) => setSenha(e.target.value)}/>
-
-    //             <input type='text' placeholder='Confirma Senha' value={confirmarSenha} onChange={(e) => setConfirmarSenha(e.target.value)}/> */}
-
-    //             <input type='submit' value="CADASTRAR" />
-    //         </form>
+    
+    
+       handleParte1Change = (parte1Data) =>{
+        this.setState((prevState) => ({
+            parte1Data: {...prevState.parte1Data, ...parte1Data}
+        }));
+       };
+    
+       handleParte2Change = (parte2Data) =>{
+        this.setState((prevState) => ({
+            parte2Data: {...prevState.parte2Data, ...parte2Data}
+        }));
+       };
+    
+       handleParte3Change = (parte3Data) =>{
+        this.setState((prevState) => ({
+            parte3Data: {...prevState.parte3Data, ...parte3Data}
+        }));
+       };
+    
+       
+       handleNextStep = () => {
+            this.setState((prevState) => ({
+            currentStep: prevState.currentStep + 1,
+            }));
+        };
+    
+        handlePreviousStep = () => {
+            this.setState((prevState) => ({
+            currentStep: prevState.currentStep - 1,
+            }));
+        };
+    
+        handleFormSubmit = async () => {
             
+            const { parte1Data, parte2Data, parte3Data } = this.state;
+    
+            const entregadorData = {
+                nome_proprietario: parte1Data.nome_proprietario,
+                cnpj_cpf: parte1Data.cnpj_cpf,
+                telefone_Restaurante: parte1Data.telefone_Restaurante,
+                email: parte1Data.email,
+                senha: parte1Data.senha,
+                confirmarSenha: parte1Data.confirmarSenha,
+                foto_Restaurante: parte3Data.foto_Restaurante,
+                especialidade: parte3Data.especialidade,
+                nome_restaurante: parte3Data.nome_restaurante,
+                descricao: parte3Data.descricao,
+                endereco:{
+                    cep:parte2Data.cep,
+                    uf:parte2Data.uf,
+                    cidade:parte2Data.cidade,
+                    bairro:parte2Data.bairro,
+                    rua: parte2Data.rua,
+                    numero_end: parte2Data.numero_end,
+                    complemento: parte2Data.complemento
+                }
+            };
+    
+            try {
+                const API_URL = 'http://localhost:5050'; // Substitua pela URL correta da sua API
+                const response = await axios.post( API_URL + '/rest/entregador/save', entregadorData);
+                console.log(response);
+    
+                if (response.status === 200) {
+                    this.setState({ showSuccessMessage: true })
+                } 
+    
+            } catch (error) {
+                console.error('Ocorreu um erro ao cadastrar:', error);
+            }
+        }
+    
+       render() {
+        const { currentStep } = this.state;
+        let formToShow;
+    
+        if(currentStep === 1) {
+            formToShow = (
+                <Parte1Form data={this.state.parte1Data} onParte1Change={this.handleParte1Change} />
+            );
+        } else if (currentStep === 2) {
+            formToShow = (
+                <Parte2Form data={this.state.parte2Data} onParte2Change={this.handleParte2Change} />
+            );
+        } else if  (currentStep === 3) {
+            formToShow = (
+                <Parte3Form data={this.state.parte3Data} onParte3Change={this.handleParte3Change} showSuccessMessage={this.state.showSuccessMessage} />
+            );
+        }
+    
+    
+        return (
+            <div>
+                <h1>Cadastro de Restaurante - Parte {currentStep}</h1>
+                {formToShow}
+                {currentStep > 1 && (
+                    <button onClick={this.handlePreviousStep}>Anterior</button>
+                )}
+                {currentStep < 3 && (
+                    <button onClick={this.handleNextStep}>Próximo</button>
+                )}
+                {currentStep === 3 && (
+                    <button onClick={this.handleFormSubmit}>Cadastrar</button>
+                )}
+            </div>
+        );
+      }
+    
 
-    //         {success && <p>Cadastro realizado com sucesso!</p>}
-    //         {error && <p>{error}</p>}
-            
-    //         <Link to="/">retornar a página inicial</Link>
-    //     </div>
-    // );
 }
 
 export default CadastroEntregador;
