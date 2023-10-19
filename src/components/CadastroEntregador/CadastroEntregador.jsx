@@ -16,7 +16,9 @@ class CadastroEntregador extends Component {
                nome:'',
                sobrenome:'',
                email:'',
-               cpf:''
+               cpf:'',
+               senha:'',
+               confirmarSenha:''
             },
 
             parte2Data: {
@@ -79,8 +81,8 @@ class CadastroEntregador extends Component {
                 cpf: parte1Data.cpf,
                 cnh: parte2Data.cnh,
                 telefone: parte2Data.telefone,
-                senha: parte2Data.senha,
-                confirmarSenha: parte2Data.confirmarSenha,
+                senha: parte1Data.senha,
+                confirmarSenha: parte1Data.confirmarSenha,
                 endereco:{
                   cep: parte3Data.cep,
                   cidade:parte3Data.cidade,

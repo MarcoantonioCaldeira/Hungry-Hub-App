@@ -20,6 +20,10 @@ const Parte1Form = ({ data, onParte1Change }) => {
 
             <input type="text" name="cpf" value={data.cpf} onChange={handleInputChange} placeholder="CPF" />
 
+            <input type="text" name="senha" value={data.senha}  onChange={handleInputChange} placeholder="Senha" />
+
+            <input type="text" name="confirmarSenha" value={data.confirmarSenha} onChange={handleInputChange} placeholder="Confirmar Senha" />
+
             <Link to="/">retornar a página inicial</Link>
 
         </div>
