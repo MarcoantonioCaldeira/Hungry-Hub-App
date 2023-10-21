@@ -6,6 +6,7 @@ import CadastroCliente from './components/CadastroCliente/CadastroCliente';
 import CadastroRestaurante from './components/CadastroRestaurante/CadastroRestaurante';
 import CadastroEntregador from './components/CadastroEntregador/CadastroEntregador';
 import Home from './components/Home';
+import Dashboard from './components/Dashboard/Dashboard';
 
 const RoutesComponent  = () => {
     return(
@@ -15,6 +16,7 @@ const RoutesComponent  = () => {
             <Route path="/cadastro" element={<CadastroCliente />} />
             <Route path="/cadastroentregador" element={<CadastroEntregador />} />
             <Route path="/cadastrorestaurante" element={<CadastroRestaurante />} />
+            <Route path='/dashboard' element={<Dashboard />} />
         </Routes>
     )
 }

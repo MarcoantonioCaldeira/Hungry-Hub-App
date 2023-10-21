@@ -35,7 +35,7 @@ class CadastroEntregador extends Component {
                numero_casa:''
             }
         };
-       };
+    };
     
     
     
