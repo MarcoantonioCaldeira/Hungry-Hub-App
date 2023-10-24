@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, BrowserRouter, Routes } from "react-router-dom";
 
+
 import Login from './components/Login';
 import CadastroCliente from './components/CadastroCliente/CadastroCliente';
 import CadastroRestaurante from './components/CadastroRestaurante/CadastroRestaurante';
@@ -16,6 +17,7 @@ const RoutesComponent  = () => {
             <Route path="/cadastro" element={<CadastroCliente />} />
             <Route path="/cadastroentregador" element={<CadastroEntregador />} />
             <Route path="/cadastrorestaurante" element={<CadastroRestaurante />} />
+            
             <Route path='/dashboard' element={<Dashboard />} />
         </Routes>
     )
