@@ -3,22 +3,20 @@ import { useNavigate } from "react-router-dom";
 import './estilo.scss'
 import ClienteLogado from "./ClienteLogado";
 
-
 const Dashboard = () => {
     const navigate = useNavigate();
+    const idDoCliente = 15; // ID do cliente
 
     const handleLogout = () => {
         navigate('/login');
     }
 
-    return(
+    return (
         <div>
             <button onClick={handleLogout}>Logout</button>
-            <ClienteLogado cliente={cliente} />
-            
+            <ClienteLogado id={idDoCliente} />
         </div>
     )
 }
-
 
 export default Dashboard;
