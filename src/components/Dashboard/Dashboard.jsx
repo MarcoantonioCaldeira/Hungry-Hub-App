@@ -1,6 +1,5 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import './estilo.scss'
 import ClienteLogado from "./ClienteLogado";
 
 const Dashboard = () => {

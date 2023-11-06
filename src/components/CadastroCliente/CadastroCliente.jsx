@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import '../style/estilo.scss';
+//import '../style/estilo.scss';
 import axios from 'axios';
 
 axios.defaults.withCredentials = true;
