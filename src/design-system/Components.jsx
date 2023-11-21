@@ -1,14 +1,26 @@
 import styled from "styled-components";
 import { theme } from "./Colors";
 
-export const Template = styled.button`
+
+export const Menu = styled.div`
+    width: 100%;
+    height: 200px;
+`
+
+export const Template = styled.div`
     width: 97%;
     height: 650px;
-    display: flex;
-    align-items: center;
-    margin: auto;
-    justify-content: center;
     background-color: red;
     border-radius: 12px;
-    background-color: ${({ them }) => theme.colors.fifth};
+`
+
+export const WeSolutions = styled.div`
+    width: 100%;
+    height: 200px;
+`
+
+export const Registration = styled.div`
+    width: 100%;
+    height: 1000px;
+    background-color: #fff;
 `
