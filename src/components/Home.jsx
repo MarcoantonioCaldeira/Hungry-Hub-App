@@ -20,12 +20,19 @@ const Home = () =>{
   return (
     <>
       <Menu className="Home">
-        <ButtonStyledMenu className='btn-register'><Link to="/cadastro">Faça o seu pedido</Link></ButtonStyledMenu>     
-        <ButtonStyledMenuTwo className='btn-login'><Link to="/login">Inicio</Link></ButtonStyledMenuTwo>
-        <ButtonStyledMenuTwo className='btn-login'><Link to="/login">Sobre</Link></ButtonStyledMenuTwo>
-        <ButtonStyledMenuTwo className='btn-login'><Link to="/login">Restaurantes</Link></ButtonStyledMenuTwo>
-        <ButtonStyledMenuTwo className='btn-login'><Link to="/login">Nossas Carreiras</Link></ButtonStyledMenuTwo>
-        <ButtonStyledMenuTwo className='btn-login'><Link to="/login">Login</Link></ButtonStyledMenuTwo>
+
+        <div className='Um'>
+          <ButtonStyledMenuTwo className='btn-login'><Link to="/login">Login</Link></ButtonStyledMenuTwo>
+          <ButtonStyledMenu className='btn-register'><Link to="/cadastro">Faça o seu pedido</Link></ButtonStyledMenu>   
+        </div>
+   
+
+        <div>
+          <ButtonStyledMenuTwo className='btn-menu'><Link to="/login">Inicio</Link></ButtonStyledMenuTwo>
+          <ButtonStyledMenuTwo className='btn-menu'><Link to="/login">Sobre</Link></ButtonStyledMenuTwo>
+          <ButtonStyledMenuTwo className='btn-menu'><Link to="/login">Restaurantes</Link></ButtonStyledMenuTwo>
+          <ButtonStyledMenuTwo className='btn-menu'><Link to="/login">Nossas Carreiras</Link></ButtonStyledMenuTwo> 
+        </div>
       </Menu>
 
       <Template className="Template">

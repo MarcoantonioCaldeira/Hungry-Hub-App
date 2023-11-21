@@ -25,7 +25,7 @@ export const ButtonStyledMenu = styled.button`
 
 export const ButtonStyledMenuTwo = styled.button`
     display:inline-block;
-    background-color:${({ them }) => theme.colors.primary};
+    background-color: white;
     border: solid 1px white;
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
