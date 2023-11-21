@@ -3,7 +3,16 @@ import './style/estilo_home.scss';
 import { Link } from 'react-router-dom';
 import Footer from './Footer/Footer';
 import { ButtonStyledMenuTwo, ButtonStyledMenu } from '../design-system/buttons.style';
-import { Template, Menu, WeSolutions, Registration} from '../design-system/Components';
+import { 
+        Template, 
+        Menu, 
+        WeSolutions, 
+        RegisterArea, 
+        RegisterAreaDeliveryMan,
+        RegisterAreaRestaurant,
+        SolutionRestaurant, 
+        SolutionLanch
+} from '../design-system/Components';
 
 
 const Home = () =>{
@@ -25,28 +34,35 @@ const Home = () =>{
       <WeSolutions className="Solutions">
         <h2>Do que você precisa?</h2>
         
-        <div className='Restaurante'>
+        <SolutionRestaurant className='Restaurante'>
 
-        </div>
+        </SolutionRestaurant>
 
-        <div className='Lanchonete'>
+        <SolutionLanch className='Lanchonete'>
 
-        </div>
+        </SolutionLanch>
+        
       </WeSolutions>
       
-      <Registration className='Area-Registrations'>
+      <RegisterArea className='Area-Registrations'>
 
-        <p>Cadastro de Entregador</p>
-        <li>
-          <Link to="/cadastroentregador">Cadastro</Link>
-        </li>
+        <h2>Quer ser o nosso parceiro?</h2>
 
-        <p>Cadastro de Restaurante</p>
-        <li>
-          <Link to="/cadastrorestaurante">Cadastro</Link>
-        </li>
-
-      </Registration>
+        <RegisterAreaDeliveryMan  className='CadastroEntregador'>
+          <p>Cadastro de Entregador</p>
+          <li>
+            <Link to="/cadastroentregador">Cadastro</Link>
+          </li>
+        </RegisterAreaDeliveryMan>
+        
+        <RegisterAreaRestaurant className='CadastroRestaurante'>
+          <p>Cadastro de Restaurante</p>
+          <li>
+            <Link to="/cadastrorestaurante">Cadastro</Link>
+          </li>
+        </RegisterAreaRestaurant>
+      
+      </RegisterArea>
       <Footer />
     </>
     
