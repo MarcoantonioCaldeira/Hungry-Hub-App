@@ -45,9 +45,6 @@ export const RegisterArea = styled.div`
 
 export const RegisterAreaDeliveryMan = styled.div`
     width: 400px;
-    display: inline-block;
-    margin-left:630px;
-    margin-top:100px;
     height: 650px;
     background-color: #D9D9D9;
     border-radius: 10px;
@@ -56,8 +53,6 @@ export const RegisterAreaDeliveryMan = styled.div`
 
 export const RegisterAreaRestaurant = styled.div`
     width: 400px;
-    margin-left:30px;
-    display: inline-block;
     height: 650px;
     background-color: #D9D9D9;
     border-radius: 10px;

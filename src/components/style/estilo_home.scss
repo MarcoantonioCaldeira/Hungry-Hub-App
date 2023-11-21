@@ -45,13 +45,23 @@
         font-weight: 600 !important;
         font-size: 50px;
     }
+
+    .Area-Sub-Registrations{
+        //background-color: red;
+        display: flex;
+        align-items: center;
+        margin: auto;
+        justify-content: center;
+        padding-top: 100px;
+    }
     
-    .CadastroEntregador{
-        display: inline-block;
+    .CadastroEntregador{        
+        margin-left:30px;
     }
 
     .CadastroRestaurante{
         display: inline-block;
+        margin-left:30px;
     }
 
 }

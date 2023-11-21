@@ -14,7 +14,7 @@ import {
         SolutionLanch
 } from '../design-system/Components';
 
-import {Font} from '../design-system/Fonts'
+import {Font, FontRestaurante, FontEntregador} from '../design-system/Fonts'
 
 const Home = () =>{
   return (
@@ -49,19 +49,23 @@ const Home = () =>{
 
         <Font>Quer ser o nosso parceiro?</Font>
 
-        <RegisterAreaDeliveryMan  className='CadastroEntregador'>
-          <p>Cadastro de Entregador</p>
-          <li>
-            <Link to="/cadastroentregador">Cadastro</Link>
-          </li>
-        </RegisterAreaDeliveryMan>
-        
-        <RegisterAreaRestaurant className='CadastroRestaurante'>
-          <p>Cadastro de Restaurante</p>
-          <li>
-            <Link to="/cadastrorestaurante">Cadastro</Link>
-          </li>
-        </RegisterAreaRestaurant>
+        <div className='Area-Sub-Registrations'>
+
+            <RegisterAreaRestaurant className='CadastroRestaurante'>
+              <FontRestaurante>Restaurante</FontRestaurante>
+              <li>
+                <Link to="/cadastrorestaurante">Saiba mais</Link>
+              </li>
+            </RegisterAreaRestaurant>
+
+            <RegisterAreaDeliveryMan  className='CadastroEntregador'>
+              <FontEntregador>Entregador</FontEntregador>
+              <li>
+                <Link to="/cadastroentregador">Saiba mais</Link>
+              </li>
+            </RegisterAreaDeliveryMan>
+        </div>
+
       
       </RegisterArea>
       <Footer />
