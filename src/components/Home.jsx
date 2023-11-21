@@ -2,16 +2,19 @@ import React from 'react';
 import './style/estilo_home.scss';
 import { Link } from 'react-router-dom';
 import Footer from './Footer/Footer';
-import { ButtonStyledTwo, ButtonStyled } from '../design-system/buttons.style';
+import { ButtonStyledMenuTwo, ButtonStyledMenu } from '../design-system/buttons.style';
 
 
 const Home = () =>{
   return (
     <>
       <div className="Home">
-        <ButtonStyledTwo className='btn-login'><Link to="/login">Login</Link></ButtonStyledTwo>
-            
-        <ButtonStyled className='btn-register'><Link to="/cadastro">Faça o seu pedido</Link></ButtonStyled>     
+        <ButtonStyledMenu className='btn-register'><Link to="/cadastro">Faça o seu pedido</Link></ButtonStyledMenu>     
+        <ButtonStyledMenuTwo className='btn-login'><Link to="/login">Inicio</Link></ButtonStyledMenuTwo>
+        <ButtonStyledMenuTwo className='btn-login'><Link to="/login">Sobre</Link></ButtonStyledMenuTwo>
+        <ButtonStyledMenuTwo className='btn-login'><Link to="/login">Restaurantes</Link></ButtonStyledMenuTwo>
+        <ButtonStyledMenuTwo className='btn-login'><Link to="/login">Nossas Carreiras</Link></ButtonStyledMenuTwo>
+        <ButtonStyledMenuTwo className='btn-login'><Link to="/login">Login</Link></ButtonStyledMenuTwo>
       </div>
 
       <div className="Template">

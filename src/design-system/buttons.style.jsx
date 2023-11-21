@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import { theme } from "./Themes";
+import { theme } from "./Colors";
 
 
 
-export const ButtonStyled = styled.button`
+export const ButtonStyledMenu = styled.button`
     width:230px;
     height: 50px;
     border-radius: 10px;
@@ -11,8 +11,6 @@ export const ButtonStyled = styled.button`
     text-decoration: none;
     color: white;
     font-weight: 300;
-    margin-left: ${(prop) => prop.left? prop.left: '80%'};
-    margin-top:-20px;
     background-color: ${({ them }) => theme.colors.fifth};
 
     a{
@@ -25,17 +23,17 @@ export const ButtonStyled = styled.button`
 
 `
 
-export const ButtonStyledTwo = styled.button`
+export const ButtonStyledMenuTwo = styled.button`
     display:inline-block;
+    background-color:${({ them }) => theme.colors.primary};
     border: solid 1px white;
-    margin-left
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
     font-weight: 300;
     
     a{
         text-decoration:none;
-        color: #658C3B;
+        color: ${({ them }) => theme.colors.fifth};
         font-family: 'Nunito', sans-serif;
         font-weight: 600;
         font-size:20px;
