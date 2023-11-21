@@ -2,17 +2,22 @@
   position: relative;
 }
 
-.Corpo{
-    width: 100%;
-    height: 2000px;
-    background-color: rgb(235, 235, 235);
-}
-
 .Template{
     display: flex;
     align-items: center;
     margin: auto;
     justify-content: center;
+}
+
+.Solutions{
+    background-color: blue;
+    margin-top: 220px;
+}
+
+.Corpo{
+    width: 100%;
+    height: 2000px;
+    background-color: rgb(235, 235, 235);
 }
 
 

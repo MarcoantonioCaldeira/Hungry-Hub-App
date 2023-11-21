@@ -19,11 +19,19 @@ const Home = () =>{
       </Menu>
 
       <Template className="Template">
-
+    
       </Template>
 
       <WeSolutions className="Solutions">
-        <h2>Nossas soluções</h2>
+        <h2>Do que você precisa?</h2>
+        
+        <div className='Restaurante'>
+
+        </div>
+
+        <div className='Lanchonete'>
+
+        </div>
       </WeSolutions>
       
       <Registration className='Area-Registrations'>

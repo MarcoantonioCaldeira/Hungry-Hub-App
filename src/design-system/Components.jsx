@@ -16,7 +16,7 @@ export const Template = styled.div`
 
 export const WeSolutions = styled.div`
     width: 100%;
-    height: 200px;
+    height: 500px;
 `
 
 export const Registration = styled.div`
