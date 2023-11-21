@@ -13,9 +13,6 @@
     margin-top: 220px;
 
     h2{
-        font-family: 'Nunito', sans-serif;
-        color: #A8BF91;
-        font-weight: 600 !important;
         font-size: 50px;
         margin-left: 50px;
     }
@@ -38,31 +35,23 @@
 
 
 .Area-Registrations{
-    background-color: red;
     position: relative;
 
     h2{
-        font-family: 'Nunito', sans-serif;
-        color: #A8BF91;
+        display: flex;
+        align-items: center;
+        margin: auto;
+        justify-content: center;
         font-weight: 600 !important;
         font-size: 50px;
     }
     
     .CadastroEntregador{
-        width: 350px;
         display: inline-block;
-        height: 500px;
-        background-color: #D9D9D9;
-        border-radius: 10px;
     }
 
     .CadastroRestaurante{
-        margin-left: 20px;
-        width: 350px;
-        height: 500px;
         display: inline-block;
-        background-color: #D9D9D9;
-        border-radius: 10px;
     }
 
 }

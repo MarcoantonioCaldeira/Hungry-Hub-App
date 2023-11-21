@@ -9,14 +9,14 @@ export const Menu = styled.div`
 
 export const Template = styled.div`
     width: 97%;
-    height: 650px;
-    background-color: red;
+    height: 850px;
+    background-color: #D9D9D9;
     border-radius: 12px;
 `;
 
 export const WeSolutions = styled.div`
     width: 100%;
-    height: 500px;
+    height: 600px;
 `;
 
 export const SolutionRestaurant = styled.div`
@@ -37,24 +37,28 @@ export const SolutionLanch = styled.div`
 
 
 export const RegisterArea = styled.div`
+    background-color: red;
     width: 100%;
-    height: 1000px;
+    height: 1200px;
     background-color: #fff;
 `;
 
 export const RegisterAreaDeliveryMan = styled.div`
-    width: 350px;
+    width: 400px;
     display: inline-block;
-    height: 500px;
+    margin-left:630px;
+    margin-top:100px;
+    height: 650px;
     background-color: #D9D9D9;
     border-radius: 10px;
 `;
 
 
 export const RegisterAreaRestaurant = styled.div`
-    width: 350px;
+    width: 400px;
+    margin-left:30px;
     display: inline-block;
-    height: 500px;
+    height: 650px;
     background-color: #D9D9D9;
     border-radius: 10px;
 `;

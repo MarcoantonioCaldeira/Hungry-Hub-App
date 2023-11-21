@@ -14,6 +14,7 @@ import {
         SolutionLanch
 } from '../design-system/Components';
 
+import {Font} from '../design-system/Fonts'
 
 const Home = () =>{
   return (
@@ -32,7 +33,7 @@ const Home = () =>{
       </Template>
 
       <WeSolutions className="Solutions">
-        <h2>Do que você precisa?</h2>
+        <Font>Do que você precisa?</Font>
         
         <SolutionRestaurant className='Restaurante'>
 
@@ -46,7 +47,7 @@ const Home = () =>{
       
       <RegisterArea className='Area-Registrations'>
 
-        <h2>Quer ser o nosso parceiro?</h2>
+        <Font>Quer ser o nosso parceiro?</Font>
 
         <RegisterAreaDeliveryMan  className='CadastroEntregador'>
           <p>Cadastro de Entregador</p>
