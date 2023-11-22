@@ -59,14 +59,16 @@ const Home = () =>{
         <div className='Area-Sub-Registrations'>
 
             <RegisterAreaRestaurant className='CadastroRestaurante'>
-              <FontRestaurante>Restaurante</FontRestaurante>
+
+              <FontRestaurante className='font_restaurante'>Restaurante</FontRestaurante>
               <li>
                 <Link to="/cadastrorestaurante">Saiba mais</Link>
               </li>
             </RegisterAreaRestaurant>
 
             <RegisterAreaDeliveryMan  className='CadastroEntregador'>
-              <FontEntregador>Entregador</FontEntregador>
+              
+              <FontEntregador className='font_entregadores'>Entregadores</FontEntregador>
               <li>
                 <Link to="/cadastroentregador">Saiba mais</Link>
               </li>

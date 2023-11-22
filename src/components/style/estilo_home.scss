@@ -5,13 +5,9 @@
     padding-left: 20px;
 
     .Um {
-        //width: 300px;
-        //background-color: red;
         float: right;
         display: flex;
         gap: 15px;
-
-        
     }
 
     .btn-menu {
@@ -65,7 +61,6 @@
     }
 
     .Area-Sub-Registrations {
-        //background-color: red;
         display: flex;
         align-items: center;
         margin: auto;
@@ -80,6 +75,14 @@
     .CadastroRestaurante {
         display: inline-block;
         margin-left: 30px;
+
+        .font_restaurante{
+            margin-top: 450px;
+        }
+
+        .font_entregadores{
+            margin-top: 450px;
+        }
     }
 
 }
