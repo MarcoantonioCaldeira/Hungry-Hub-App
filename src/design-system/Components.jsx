@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import { theme } from "./Colors";
+import ImageDelivery from '../assets/img/img_entregador.jpg'
+import ImageRestaurant from '../assets/img/img_restaurante.jpg'
 
 
 export const Menu = styled.div`

@@ -3,11 +3,13 @@
     padding-top: 30px;
     padding-right: 20px;
     padding-left: 20px;
+    //background-color: blue;
 
     .Um {
+        //background-color: red;
         float: right;
         display: flex;
-        gap: 15px;
+        gap: 10px;
     }
 
     .btn-menu {
@@ -21,6 +23,12 @@
     align-items: center;
     margin: auto;
     justify-content: center;
+
+    .ImageTemplate{
+        border-radius: 10px;
+        width: 100%;
+        height: 100%;
+    }
 }
 
 .Solutions {
@@ -51,7 +59,10 @@
 .Area-Registrations {
     position: relative;
 
+    //Titulo da pegina
     h2 {
+        position: absolute;
+        top: 0;
         display: flex;
         align-items: center;
         margin: auto;
@@ -66,10 +77,34 @@
         margin: auto;
         justify-content: center;
         padding-top: 100px;
+        overflow: hidden;
+
+        .ImageDelivery{
+            border-radius: 10px;
+            width: 100%; /* A imagem ocupará 100% da largura da div */
+            height: 100%; /* A imagem ocupará 100% da altura da div */
+            object-fit: cover; /* Mantém a proporção da imagem, cortando ou ajustando para cobrir a div */
+            display: block;
+        }
+
+
+        .ImageRestaurant{
+            border-radius: 10px;
+            width: 100%; /* A imagem ocupará 100% da largura da div */
+            height: 100%; /* A imagem ocupará 100% da altura da div */
+            object-fit: cover; /* Mantém a proporção da imagem, cortando ou ajustando para cobrir a div */
+            display: block; 
+        }
+
     }
 
     .CadastroEntregador {
         margin-left: 30px;
+
+        .font_entregadores{
+            margin-top: 450px;
+            
+        }
     }
 
     .CadastroRestaurante {
@@ -77,10 +112,6 @@
         margin-left: 30px;
 
         .font_restaurante{
-            margin-top: 450px;
-        }
-
-        .font_entregadores{
             margin-top: 450px;
         }
     }

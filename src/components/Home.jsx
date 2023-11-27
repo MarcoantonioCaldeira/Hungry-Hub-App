@@ -16,6 +16,12 @@ import {
 
 import {Font, FontRestaurante, FontEntregador} from '../design-system/Fonts'
 
+//img
+import ImageTamplate from '../assets/img/image-painel.jpg'
+import ImageDelivery from '../assets/img/img_entregador.jpg'
+import ImageRestaurant from '../assets/img/img_restaurante.jpg'
+
+
 const Home = () =>{
   return (
     <>
@@ -36,7 +42,7 @@ const Home = () =>{
       </Menu>
 
       <Template className="Template">
-    
+        <img src={ImageTamplate} className='ImageTemplate'/>
       </Template>
 
       <WeSolutions className="Solutions">
@@ -59,19 +65,23 @@ const Home = () =>{
         <div className='Area-Sub-Registrations'>
 
             <RegisterAreaRestaurant className='CadastroRestaurante'>
-
-              <FontRestaurante className='font_restaurante'>Restaurante</FontRestaurante>
-              <li>
-                <Link to="/cadastrorestaurante">Saiba mais</Link>
-              </li>
+              <img src={ImageDelivery} className='ImageDelivery'/>
+              <div>
+                <FontRestaurante className='font_restaurante'>Restaurante</FontRestaurante>
+                <li>
+                  <Link to="/cadastrorestaurante">Saiba mais</Link>
+                </li>
+              </div>
             </RegisterAreaRestaurant>
 
             <RegisterAreaDeliveryMan  className='CadastroEntregador'>
-              
-              <FontEntregador className='font_entregadores'>Entregadores</FontEntregador>
-              <li>
-                <Link to="/cadastroentregador">Saiba mais</Link>
-              </li>
+              <img src={ImageRestaurant} className='ImageRestaurant'/>
+              <div>
+                <FontEntregador className='font_entregadores'>Entregadores</FontEntregador>
+                <li>
+                  <Link to="/cadastroentregador">Saiba mais</Link>
+                </li>
+              </div>
             </RegisterAreaDeliveryMan>
         </div>
 
