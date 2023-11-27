@@ -61,7 +61,7 @@
 
     //Titulo da pegina
     h2 {
-        position: absolute;
+        //position: absolute;
         top: 0;
         display: flex;
         align-items: center;
@@ -71,12 +71,15 @@
         font-size: 50px;
     }
 
+
+
     .Area-Sub-Registrations {
+        //background-color: red;
         display: flex;
         align-items: center;
-        margin: auto;
+        //margin: auto;
         justify-content: center;
-        padding-top: 100px;
+        padding-top: 50px;
         overflow: hidden;
 
         .ImageDelivery{
@@ -86,7 +89,6 @@
             object-fit: cover; /* Mantém a proporção da imagem, cortando ou ajustando para cobrir a div */
             display: block;
         }
-
 
         .ImageRestaurant{
             border-radius: 10px;
@@ -102,8 +104,9 @@
         margin-left: 30px;
 
         .font_entregadores{
-            margin-top: 450px;
-            
+            position: absolute;
+            padding-top: 600px;
+            padding-left: 40px;
         }
     }
 
@@ -112,7 +115,10 @@
         margin-left: 30px;
 
         .font_restaurante{
-            margin-top: 450px;
+            position: absolute;
+            padding-top: 600px;
+            padding-left: 50px;
+
         }
     }
 

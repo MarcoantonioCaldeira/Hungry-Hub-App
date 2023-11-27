@@ -10,7 +10,7 @@ export const Menu = styled.div`
 `;
 
 export const Template = styled.div`
-    width: 97%;
+    width: 1450px;
     height: 850px;
     background-color: #D9D9D9;
     border-radius: 12px;
@@ -39,10 +39,9 @@ export const SolutionLanch = styled.div`
 
 
 export const RegisterArea = styled.div`
-    background-color: red;
     width: 100%;
     height: 1200px;
-    background-color: #fff;
+ 
 `;
 
 export const RegisterAreaDeliveryMan = styled.div`

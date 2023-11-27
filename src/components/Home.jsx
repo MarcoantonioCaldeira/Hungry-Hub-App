@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import './style/estilo_home.scss';
 import { Link } from 'react-router-dom';
 import Footer from './Footer/Footer';
@@ -18,14 +18,25 @@ import {Font, FontRestaurante, FontEntregador} from '../design-system/Fonts'
 
 //img
 import ImageTamplate from '../assets/img/image-painel.jpg'
-import ImageDelivery from '../assets/img/img_entregador.jpg'
-import ImageRestaurant from '../assets/img/img_restaurante.jpg'
+import ImageDelivery from '../assets/img/img_restaurante.jpg'
+import ImageRestaurant from '../assets/img/img_entregador.jpg'
 
 
 const Home = () =>{
+
+  const myComponent = useRef(null)
+  const myComponentInitial = useRef(null)
+
+  const ScrollMenu = (ref) => {
+    if (ref.current) {
+      ref.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+
   return (
     <>
-      <Menu className="Home">
+      <Menu className="Home" ref={myComponentInitial}>
 
         <div className='Um'>
           <ButtonStyledMenuTwo className='btn-login'><Link to="/login">Login</Link></ButtonStyledMenuTwo>
@@ -34,10 +45,10 @@ const Home = () =>{
    
 
         <div>
-          <ButtonStyledMenuTwo className='btn-menu'><Link to="/login">Inicio</Link></ButtonStyledMenuTwo>
-          <ButtonStyledMenuTwo className='btn-menu'><Link to="/login">Sobre</Link></ButtonStyledMenuTwo>
-          <ButtonStyledMenuTwo className='btn-menu'><Link to="/login">Restaurantes</Link></ButtonStyledMenuTwo>
-          <ButtonStyledMenuTwo className='btn-menu'><Link to="/login">Nossas Carreiras</Link></ButtonStyledMenuTwo> 
+          <ButtonStyledMenuTwo className='btn-menu' onClick={() => ScrollMenu(myComponentInitial)}><Link>Inicio</Link></ButtonStyledMenuTwo>
+          {/* <ButtonStyledMenuTwo className='btn-menu'><Link to="/login">Sobre</Link></ButtonStyledMenuTwo>
+          <ButtonStyledMenuTwo className='btn-menu'><Link to="/login">Restaurantes</Link></ButtonStyledMenuTwo> */}
+          <ButtonStyledMenuTwo className='btn-menu' onClick={() => ScrollMenu(myComponent)}><Link>Nossas Carreiras</Link></ButtonStyledMenuTwo> 
         </div>
       </Menu>
 
@@ -58,7 +69,7 @@ const Home = () =>{
         
       </WeSolutions>
       
-      <RegisterArea className='Area-Registrations'>
+      <RegisterArea ref={myComponent}  className='Area-Registrations'>
 
         <Font>Quer ser o nosso parceiro?</Font>
 
