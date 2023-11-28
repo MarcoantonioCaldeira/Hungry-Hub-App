@@ -16,6 +16,13 @@
         margin: 10px;
     }
 
+    @media screen and (max-width: 600px) {
+
+        .Vertical_Menu{
+            display: none;
+        }
+    }
+
 }
 
 .Template {

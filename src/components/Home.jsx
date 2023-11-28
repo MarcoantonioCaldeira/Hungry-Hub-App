@@ -1,5 +1,6 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import './style/estilo_home.scss';
+import './style/MenuHamburguer.jsx';
 import { Link } from 'react-router-dom';
 import Footer from './Footer/Footer';
 import { ButtonStyledMenuTwo, ButtonStyledMenu } from '../design-system/buttons.style';
@@ -10,11 +11,13 @@ import {
         RegisterArea, 
         RegisterAreaDeliveryMan,
         RegisterAreaRestaurant,
-        SolutionRestaurant, 
-        SolutionLanch
+        SolutionRestaurant,
+        SolutionLanch,
 } from '../design-system/Components';
 
 import {Font, FontRestaurante, FontEntregador} from '../design-system/Fonts'
+
+import { MenuHamburguer } from './style/MenuHamburguer.jsx';
 
 //img
 import ImageTamplate from '../assets/img/image-painel.jpg'
@@ -33,24 +36,49 @@ const Home = () =>{
     }
   };
 
+  const [OpenMenu, setOpenMenu] = useState(false);
+
+  const toggleMenu = () => {
+      setOpenMenu(!OpenMenu)
+  }
+
+
 
   return (
     <>
+      {/* <HamburguerMenu /> */}
+
       <Menu className="Home" ref={myComponentInitial}>
-
-        <div className='Um'>
-          <ButtonStyledMenuTwo className='btn-login'><Link to="/login">Login</Link></ButtonStyledMenuTwo>
-          <ButtonStyledMenu className='btn-register'><Link to="/cadastro">Faça o seu pedido</Link></ButtonStyledMenu>   
+        
+        <div className='Vertical_Menu'>
+          {/* Botões de login e Cadastro */}
+          <div className='Um'>
+            <ButtonStyledMenuTwo className='btn-login'><Link to="/login">Login</Link></ButtonStyledMenuTwo>
+            <ButtonStyledMenu className='btn-register'><Link to="/cadastro">Faça o seu pedido</Link></ButtonStyledMenu>   
+          </div>
+    
+          {/* Botões de  Inicio e Carreiras*/}
+          <div>
+            <ButtonStyledMenuTwo className='btn-menu' onClick={() => ScrollMenu(myComponentInitial)}><Link>Inicio</Link></ButtonStyledMenuTwo>
+            <ButtonStyledMenuTwo className='btn-menu' onClick={() => ScrollMenu(myComponent)}><Link>Nossas Carreiras</Link></ButtonStyledMenuTwo> 
+          </div>
         </div>
-   
 
-        <div>
-          <ButtonStyledMenuTwo className='btn-menu' onClick={() => ScrollMenu(myComponentInitial)}><Link>Inicio</Link></ButtonStyledMenuTwo>
-          {/* <ButtonStyledMenuTwo className='btn-menu'><Link to="/login">Sobre</Link></ButtonStyledMenuTwo>
-          <ButtonStyledMenuTwo className='btn-menu'><Link to="/login">Restaurantes</Link></ButtonStyledMenuTwo> */}
-          <ButtonStyledMenuTwo className='btn-menu' onClick={() => ScrollMenu(myComponent)}><Link>Nossas Carreiras</Link></ButtonStyledMenuTwo> 
-        </div>
+        <MenuHamburguer menuAberto={OpenMenu}>
+            <div className="icone-hamburguer" onClick={toggleMenu}>
+              <div className="linha"></div>
+                <div className="linha"></div>
+                <div className="linha"></div>
+              </div>
+
+              <ul className="itens-menu">
+              <ButtonStyledMenuTwo className='btn-menu' onClick={() => ScrollMenu(myComponentInitial)}><Link>Inicio</Link></ButtonStyledMenuTwo>
+            <ButtonStyledMenuTwo className='btn-menu' onClick={() => ScrollMenu(myComponent)}><Link>Nossas Carreiras</Link></ButtonStyledMenuTwo> 
+              </ul>
+        </MenuHamburguer>
       </Menu>
+
+
 
       <Template className="Template">
         <img src={ImageTamplate} className='ImageTemplate'/>
