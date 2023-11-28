@@ -71,18 +71,20 @@ const Home = () =>{
                 <div className="linha"></div>
               </div>
 
-              <ul className="itens-menu">
+            <ul className="itens-menu">
               <ButtonStyledMenuTwo className='btn-menu' onClick={() => ScrollMenu(myComponentInitial)}><Link>Inicio</Link></ButtonStyledMenuTwo>
-            <ButtonStyledMenuTwo className='btn-menu' onClick={() => ScrollMenu(myComponent)}><Link>Nossas Carreiras</Link></ButtonStyledMenuTwo> 
-              </ul>
+              <ButtonStyledMenuTwo className='btn-menu' onClick={() => ScrollMenu(myComponent)}><Link>Nossas Carreiras</Link></ButtonStyledMenuTwo> 
+            </ul>
         </MenuHamburguer>
       </Menu>
 
 
-
-      <Template className="Template">
-        <img src={ImageTamplate} className='ImageTemplate'/>
-      </Template>
+      <div className='Template_Area'>
+        <Template className="Template">
+          <img src={ImageTamplate} className='ImageTemplate'/>
+        </Template>
+      </div>
+      
 
       <WeSolutions className="Solutions">
         <Font>Do que você precisa?</Font>
@@ -105,23 +107,28 @@ const Home = () =>{
 
             <RegisterAreaRestaurant className='CadastroRestaurante'>
               <img src={ImageDelivery} className='ImageDelivery'/>
-              <div>
-                <FontRestaurante className='font_restaurante'>Restaurante</FontRestaurante>
-                <li>
-                  <Link to="/cadastrorestaurante">Saiba mais</Link>
-                </li>
+            
+              <div className='CadastroRestaurante2'>
+                  <FontRestaurante className='font_restaurante'>Restaurante</FontRestaurante>
+                  <li>
+                    <Link to="/cadastrorestaurante">Saiba mais</Link>
+                  </li>
               </div>
+        
             </RegisterAreaRestaurant>
+
 
             <RegisterAreaDeliveryMan  className='CadastroEntregador'>
               <img src={ImageRestaurant} className='ImageRestaurant'/>
-              <div>
+             
+              <div className='CadastroEntregador2'>
                 <FontEntregador className='font_entregadores'>Entregadores</FontEntregador>
                 <li>
                   <Link to="/cadastroentregador">Saiba mais</Link>
                 </li>
               </div>
             </RegisterAreaDeliveryMan>
+
         </div>
 
       

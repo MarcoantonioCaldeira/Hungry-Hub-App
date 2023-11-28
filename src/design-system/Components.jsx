@@ -10,8 +10,8 @@ export const Menu = styled.div`
 `;
 
 export const Template = styled.div`
-    width: 1450px;
-    height: 850px;
+    width: 97%;
+    height: auto;
     background-color: #D9D9D9;
     border-radius: 12px;
 `;
@@ -27,6 +27,10 @@ export const SolutionRestaurant = styled.div`
     height: 200px;
     background-color: #D9D9D9;
     border-radius: 10px;
+
+    @media screen and (max-width: 600px) {
+        width: 97%;
+    }
 `;
 
 export const SolutionLanch = styled.div`
@@ -35,13 +39,19 @@ export const SolutionLanch = styled.div`
     height: 200px;
     background-color: #D9D9D9;
     border-radius: 10px;
+
+    @media screen and (max-width: 600px) {
+        width: 97%;
+    }
 `;
 
 
 export const RegisterArea = styled.div`
-    width: 100%;
+    
     height: 1200px;
- 
+    @media screen and (max-width: 600px) {
+        height: 900px;
+    }
 `;
 
 export const RegisterAreaDeliveryMan = styled.div`
