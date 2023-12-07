@@ -25,7 +25,7 @@ export const SolutionRestaurant = styled.div`
     width: 400px;
     display: inline-block;
     height: 200px;
-    background-color: #D9D9D9;
+    background-image: linear-gradient(#F5393A, #F5A7A8);
     border-radius: 10px;
 
     @media screen and (max-width: 600px) {
@@ -37,7 +37,7 @@ export const SolutionLanch = styled.div`
     width: 400px;
     display: inline-block;
     height: 200px;
-    background-color: #D9D9D9;
+    background-image: linear-gradient(#F5393A, #F5A7A8);
     border-radius: 10px;
 
     @media screen and (max-width: 600px) {

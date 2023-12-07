@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, BrowserRouter, Routes } from "react-router-dom";
 
 
-import Login from '../components/Login';
+import Login from '../components/Login/Login';
 import CadastroCliente from '../components/CadastroCliente/CadastroCliente';
 import CadastroRestaurante from '../components/CadastroRestaurante/CadastroRestaurante';
 import CadastroEntregador from '../components/CadastroEntregador/CadastroEntregador';

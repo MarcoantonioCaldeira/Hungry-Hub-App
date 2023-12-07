@@ -3,7 +3,7 @@ import './style/estilo_home.scss';
 import './style/MenuHamburguer.jsx';
 import { Link } from 'react-router-dom';
 import Footer from './Footer/Footer';
-import { ButtonStyledMenuTwo, ButtonStyledMenu } from '../design-system/buttons.style';
+import { ButtonStyledMenuTwo, ButtonStyledMenu, ButtonCarrers } from '../design-system/buttons.style';
 import { 
         Template, 
         Menu, 
@@ -90,11 +90,11 @@ const Home = () =>{
         <Font>Do que você precisa?</Font>
         
         <SolutionRestaurant className='Restaurante'>
-
+            <p>Restaurantes</p>
         </SolutionRestaurant>
 
         <SolutionLanch className='Lanchonete'>
-
+            <p>Mercados</p>
         </SolutionLanch>
         
       </WeSolutions>
@@ -110,9 +110,10 @@ const Home = () =>{
             
               <div className='CadastroRestaurante2'>
                   <FontRestaurante className='font_restaurante'>Restaurante</FontRestaurante>
-                  <li>
-                    <Link to="/cadastrorestaurante">Saiba mais</Link>
-                  </li>
+                  <div>
+                    <ButtonCarrers className='btn_saiba'><Link  to="/cadastrorestaurante">Saiba mais</Link></ButtonCarrers>
+                  </div>
+                  
               </div>
         
             </RegisterAreaRestaurant>
@@ -123,9 +124,11 @@ const Home = () =>{
              
               <div className='CadastroEntregador2'>
                 <FontEntregador className='font_entregadores'>Entregadores</FontEntregador>
-                <li>
-                  <Link to="/cadastroentregador">Saiba mais</Link>
-                </li>
+
+                <div>
+                  <ButtonCarrers className='btn_saiba'><Link  to="/cadastroentregador">Saiba mais</Link></ButtonCarrers>
+                </div>              
+               
               </div>
             </RegisterAreaDeliveryMan>
 
