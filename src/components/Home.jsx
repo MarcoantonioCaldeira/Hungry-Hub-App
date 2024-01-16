@@ -48,9 +48,7 @@ const Home = () =>{
 
   return (
     <>
-      <Menu className="Home" ref={myComponentInitial}>
-
-      
+      <Menu className="Home" ref={myComponentInitial}>   
         
         <div  className='Vertical_Menu'>
           <div className='Um'>
@@ -58,14 +56,18 @@ const Home = () =>{
             <ButtonStyledMenu className='btn-register'><Link to="/cadastro">Faça o seu pedido</Link></ButtonStyledMenu>   
           </div>
 
-          <div>
+          <div> 
             <div class="logo">
                 <img className='Logo' src={Logo}/>
             </div>
-
-            <ButtonStyledMenuTwo className='btn-menu' onClick={() => ScrollMenu(myComponentInitial)}><Link>Inicio</Link></ButtonStyledMenuTwo>
-            <ButtonStyledMenuTwo className='btn-menu' onClick={() => ScrollMenu(myComponent)}><Link>Nossas Carreiras</Link></ButtonStyledMenuTwo> 
+            
+            <div className='Teste-btn'>
+              <ButtonStyledMenuTwo className='btn-menu' onClick={() => ScrollMenu(myComponentInitial)}><Link>Inicio</Link></ButtonStyledMenuTwo>
+              <ButtonStyledMenuTwo className='btn-menu' onClick={() => ScrollMenu(myComponent)}><Link>Nossas Carreiras</Link></ButtonStyledMenuTwo> 
+            </div>
+          
           </div>
+          
         </div>
 
         <MenuHamburguer menuAberto={OpenMenu}>

@@ -6,24 +6,33 @@
 
     .logo{
         display: inline-block;
+        margin-top: -40px;
         .Logo{
-            width: 220px;
+            width: 260px;
         }
     }
 
     .Um {
-        //background-color: red;
         float: right;
         display: flex;
         gap: 10px;
     }
 
     .btn-menu {
+        display: inline-block;
+        //background-color: red;
         margin: 10px;
     }
 
-    @media screen and (max-width: 600px) {
+    .Teste-btn{
+        position: absolute;
+        display: inline-block;
+        margin-left: 22px;
+        //margin-top: 1px;
+        //background-color: red;
+    }
 
+    @media screen and (max-width: 600px) {
         .Vertical_Menu{
             display: none;
         }
