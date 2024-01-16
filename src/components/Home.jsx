@@ -23,6 +23,8 @@ import { MenuHamburguer } from './style/MenuHamburguer.jsx';
 import ImageTamplate from '../assets/img/image-painel.jpg'
 import ImageDelivery from '../assets/img/img_restaurante.jpg'
 import ImageRestaurant from '../assets/img/img_entregador.jpg'
+import Logo from '../assets/img/Logo.png'
+import { SassColor } from 'sass';
 
 
 const Home = () =>{
@@ -46,19 +48,21 @@ const Home = () =>{
 
   return (
     <>
-      {/* <HamburguerMenu /> */}
-
       <Menu className="Home" ref={myComponentInitial}>
+
+      
         
-        <div className='Vertical_Menu'>
-          {/* Botões de login e Cadastro */}
+        <div  className='Vertical_Menu'>
           <div className='Um'>
             <ButtonStyledMenuTwo className='btn-login'><Link to="/login">Login</Link></ButtonStyledMenuTwo>
             <ButtonStyledMenu className='btn-register'><Link to="/cadastro">Faça o seu pedido</Link></ButtonStyledMenu>   
           </div>
-    
-          {/* Botões de  Inicio e Carreiras*/}
+
           <div>
+            <div class="logo">
+                <img className='Logo' src={Logo}/>
+            </div>
+
             <ButtonStyledMenuTwo className='btn-menu' onClick={() => ScrollMenu(myComponentInitial)}><Link>Inicio</Link></ButtonStyledMenuTwo>
             <ButtonStyledMenuTwo className='btn-menu' onClick={() => ScrollMenu(myComponent)}><Link>Nossas Carreiras</Link></ButtonStyledMenuTwo> 
           </div>
