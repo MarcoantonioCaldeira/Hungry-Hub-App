@@ -8,6 +8,10 @@ import { ButtonLogin } from '../../design-system/buttons.style';
 import {FontLogin} from '../../design-system/Fonts';
 import { InputLogin } from '../../design-system/Inputs';
 
+import { Logo } from '../../design-system/GlobalStyle';
+
+import LogoImg from '../../assets/img/Logo.png';
+
 const Login = () => {
 
     const [email, setEmail] = useState('');
@@ -44,7 +48,11 @@ const Login = () => {
     return(
         <>
             <div className='BodyLogin'>
-                 {/* <img src={BackgroundLogin} className='BackgroundLogin'/>    */}
+
+                <Logo>
+                    <img src={LogoImg} className='LogoImg'/>
+                </Logo>
+
                 <form onSubmit={handleFormAuth}>
                     
                     <div className='areaInputLogin'>
