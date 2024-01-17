@@ -4,6 +4,10 @@
     background-image: url('../../assets/img/background_login.jpg');
     background-repeat: no-repeat;
     background-size: cover; // ou 'contain', dependendo do efeito desejado
+
+    .LogoImg{
+        width: 250px;
+    }
 }
 
 .TitleLogin{

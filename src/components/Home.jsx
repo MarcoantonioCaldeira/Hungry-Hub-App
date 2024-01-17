@@ -14,6 +14,7 @@ import {
         SolutionRestaurant,
         SolutionLanch,
 } from '../design-system/Components';
+import { Logo } from '../design-system/GlobalStyle.jsx';
 
 import {Font, FontRestaurante, FontEntregador} from '../design-system/Fonts'
 
@@ -23,7 +24,7 @@ import { MenuHamburguer } from './style/MenuHamburguer.jsx';
 import ImageTamplate from '../assets/img/image-painel.jpg'
 import ImageDelivery from '../assets/img/img_restaurante.jpg'
 import ImageRestaurant from '../assets/img/img_entregador.jpg'
-import Logo from '../assets/img/Logo.png'
+import LogoImg from '../assets/img/Logo.png'
 import { SassColor } from 'sass';
 
 
@@ -48,9 +49,7 @@ const Home = () =>{
 
   return (
     <>
-      <Menu className="Home" ref={myComponentInitial}>
-
-      
+      <Menu className="Home" ref={myComponentInitial}>   
         
         <div  className='Vertical_Menu'>
           <div className='Um'>
@@ -58,14 +57,18 @@ const Home = () =>{
             <ButtonStyledMenu className='btn-register'><Link to="/cadastro">Faça o seu pedido</Link></ButtonStyledMenu>   
           </div>
 
-          <div>
-            <div class="logo">
-                <img className='Logo' src={Logo}/>
+          <div> 
+            <Logo>
+                <img className='Logo' src={LogoImg}/>
+            </Logo>
+            
+            <div className='Teste-btn'>
+              <ButtonStyledMenuTwo className='btn-menu' onClick={() => ScrollMenu(myComponentInitial)}><Link>Inicio</Link></ButtonStyledMenuTwo>
+              <ButtonStyledMenuTwo className='btn-menu' onClick={() => ScrollMenu(myComponent)}><Link>Nossas Carreiras</Link></ButtonStyledMenuTwo> 
             </div>
-
-            <ButtonStyledMenuTwo className='btn-menu' onClick={() => ScrollMenu(myComponentInitial)}><Link>Inicio</Link></ButtonStyledMenuTwo>
-            <ButtonStyledMenuTwo className='btn-menu' onClick={() => ScrollMenu(myComponent)}><Link>Nossas Carreiras</Link></ButtonStyledMenuTwo> 
+          
           </div>
+          
         </div>
 
         <MenuHamburguer menuAberto={OpenMenu}>

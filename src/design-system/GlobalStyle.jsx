@@ -10,4 +10,9 @@ export const GlobalStyled = createGlobalStyle`
     input{
         display: block;
     }
+
+    Logo{
+        display: inline-block;
+        margin-top: -40px;
+    }
 `
