@@ -7,9 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import { ButtonLogin } from '../../design-system/buttons.style';
 import {FontLogin} from '../../design-system/Fonts';
 import { InputLogin } from '../../design-system/Inputs';
-
-import { Logo } from '../../design-system/GlobalStyle';
-
+import { Logo } from '../../design-system/Images';
 import LogoImg from '../../assets/img/Logo.png';
 
 const Login = () => {

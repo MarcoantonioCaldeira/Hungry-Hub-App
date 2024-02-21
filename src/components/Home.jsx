@@ -9,23 +9,19 @@ import {
         Menu, 
         WeSolutions, 
         RegisterArea, 
-        RegisterAreaDeliveryMan,
         RegisterAreaRestaurant,
         SolutionRestaurant,
         SolutionLanch,
 } from '../design-system/Components';
-import { Logo } from '../design-system/GlobalStyle.jsx';
+import  { Logo } from '../design-system/Images.jsx';
 
 import {Font, FontRestaurante, FontEntregador} from '../design-system/Fonts'
 
 import { MenuHamburguer } from './style/MenuHamburguer.jsx';
-
-//img
 import ImageTamplate from '../assets/img/image-painel.jpg'
 import ImageDelivery from '../assets/img/img_restaurante.jpg'
 import ImageRestaurant from '../assets/img/img_entregador.jpg'
 import LogoImg from '../assets/img/Logo.png'
-import { SassColor } from 'sass';
 
 
 const Home = () =>{
@@ -124,20 +120,6 @@ const Home = () =>{
               </div>
         
             </RegisterAreaRestaurant>
-
-
-            <RegisterAreaDeliveryMan  className='CadastroEntregador'>
-              <img src={ImageRestaurant} className='ImageRestaurant'/>
-             
-              <div className='CadastroEntregador2'>
-                <FontEntregador className='font_entregadores'>Entregadores</FontEntregador>
-
-                <div>
-                  <ButtonCarrers className='btn_saiba'><Link  to="/cadastroentregador">Saiba mais</Link></ButtonCarrers>
-                </div>              
-               
-              </div>
-            </RegisterAreaDeliveryMan>
 
         </div>
 
