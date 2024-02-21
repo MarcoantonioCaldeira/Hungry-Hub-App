@@ -10,8 +10,17 @@ import { InputLogin } from '../../design-system/Inputs';
 import { Logo } from '../../design-system/Images';
 import LogoImg from '../../assets/img/Logo.png';
 
-const Login = () => {
+const FormularioLoginProps = {
+    onLoginSuccess: function(usuario) {
+        // Lógica para quando o login é bem-sucedido
+    },
+    onLoginFailure: function(error) {
+        // Lógica para quando o login falha
+    }
+};
 
+  
+const Login = ({ onLoginSuccess, onLoginFailure }) => {
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
     const navigate = useNavigate();

@@ -5,22 +5,19 @@ import { Link } from 'react-router-dom';
 import Footer from './Footer/Footer';
 import { ButtonStyledMenuTwo, ButtonStyledMenu, ButtonCarrers } from '../design-system/buttons.style';
 import { 
-        Template, 
-        Menu, 
-        WeSolutions, 
-        RegisterArea, 
-        RegisterAreaRestaurant,
-        SolutionRestaurant,
-        SolutionLanch,
+      Template, 
+      Menu, 
+      WeSolutions, 
+      RegisterArea, 
+      RegisterAreaRestaurant,
+      SolutionRestaurant,
+      SolutionLanch,
 } from '../design-system/Components';
 import  { Logo } from '../design-system/Images.jsx';
-
-import {Font, FontRestaurante, FontEntregador} from '../design-system/Fonts'
-
+import {Font, FontRestaurante} from '../design-system/Fonts'
 import { MenuHamburguer } from './style/MenuHamburguer.jsx';
 import ImageTamplate from '../assets/img/image-painel.jpg'
 import ImageDelivery from '../assets/img/img_restaurante.jpg'
-import ImageRestaurant from '../assets/img/img_entregador.jpg'
 import LogoImg from '../assets/img/Logo.png'
 
 

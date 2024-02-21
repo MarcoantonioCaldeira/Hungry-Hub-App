@@ -25,26 +25,26 @@ const ClienteLogado = ({ id }) => {
     setEditedCliente({ ...cliente });
   };
 
-  const AtualizarDados = async () => {
-    try {
-      const URL_API = 'http://localhost:5050';
+  // const AtualizarDados = async () => {
+  //   try {
+  //     const URL_API = 'http://localhost:5050';
 
-      const dadosAtualizados = {
-        id: cliente.id,
-        nome: editedCliente.nome,
-        email: editedCliente.email,
-        telefone: "18998113253",
-        senha: "senha13243",
-        confirmarSenha: "senha13243"
-      };
+  //     const dadosAtualizados = {
+  //       id: cliente.id,
+  //       nome: editedCliente.nome,
+  //       email: editedCliente.email,
+  //       telefone: "18998113253",
+  //       senha: "senha13243",
+  //       confirmarSenha: "senha13243"
+  //     };
 
-      const resposta = await axios.put(`${URL_API}/rest/cliente/update/${id}`, dadosAtualizados);
-      setIsEditing(false);
-      //setIsEditing(resposta.data.object)
-    } catch (error) {
-      console.error('Erro ao atualizar os dados do cliente', error);
-    }
-  }
+  //     const resposta = await axios.put(`${URL_API}/rest/cliente/update/${id}`, dadosAtualizados);
+  //     setIsEditing(false);
+  //     //setIsEditing(resposta.data.object)
+  //   } catch (error) {
+  //     console.error('Erro ao atualizar os dados do cliente', error);
+  //   }
+  // }
 
   return (
     <div>
